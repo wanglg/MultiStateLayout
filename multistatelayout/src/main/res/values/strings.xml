@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MultiStateLayout</string>
+    <string name="multi_state_empty">Empty</string>
+    <string name="multi_state_error">Error</string>
+</resources>

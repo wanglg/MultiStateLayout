@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MultiStateLayout">
+        <attr name="multi_state_empty" format="reference" />
+        <attr name="multi_state_progress" format="reference" />
+        <attr name="multi_state_error" format="reference" />
+        <attr name="multi_state_content" format="reference" />
+        <attr name="multi_state_default" format="enum">
+            <enum name="content" value="0" />
+            <enum name="error" value="1" />
+            <enum name="empty" value="2" />
+            <enum name="progress" value="3" />
+        </attr>
+        <attr name="mainLayoutId" format="reference" />
+    </declare-styleable>
+</resources>

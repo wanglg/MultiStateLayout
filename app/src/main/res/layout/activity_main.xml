@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/content_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="content" />
+
+        <Button
+            android:id="@+id/content_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="progress" />
+
+        <Button
+            android:id="@+id/content_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="empty" />
+
+        <Button
+            android:id="@+id/content_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="error" />
+    </LinearLayout>
+
+
+    <com.leowong.library.multistatelayout.MultiStateLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/multistate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:multi_state_content="@layout/content_main"
+        app:multi_state_default="progress"
+        app:multi_state_progress="@layout/content_progress">
+        <!-- app:multi_state_empty="@layout/content_empty"
+         app:multi_state_error="@layout/content_error"-->
+
+    </com.leowong.library.multistatelayout.MultiStateLayout>
+</LinearLayout>
