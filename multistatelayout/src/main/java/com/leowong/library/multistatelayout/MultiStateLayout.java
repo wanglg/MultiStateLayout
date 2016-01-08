@@ -33,7 +33,7 @@ public class MultiStateLayout extends FrameLayout {
     private int mState;
 
 
-    public static class State {
+    public final static class State {
         public static final int STATE_CONTENT = 0;
         public static final int STATE_PROGRESS = 3;
         public static final int STATE_ERROR = 1;
@@ -76,17 +76,21 @@ public class MultiStateLayout extends FrameLayout {
             throw new IllegalStateException("MultiStateLayout must have a content layout");
         }
         mContent.setLayoutResource(mContentId);
+        mContent.inflate();
         mProgress = (ViewStub) v.findViewById(R.id.multi_state_progress);
         if (mProgressId != 0) {
             mProgress.setLayoutResource(mProgressId);
+            mProgress.inflate();
         }
         mEmpty = (ViewStub) v.findViewById(R.id.multi_state_empty);
         if (mEmptyId != 0) {
             mEmpty.setLayoutResource(mEmptyId);
+            mEmpty.inflate();
         }
         mError = (ViewStub) v.findViewById(R.id.multi_state_error);
         if (mErrorId != 0) {
             mError.setLayoutResource(mErrorId);
+            mError.inflate();
         }
         switchState(mState);
     }

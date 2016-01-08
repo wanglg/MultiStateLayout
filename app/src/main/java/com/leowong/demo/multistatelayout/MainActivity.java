@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+        textView = (TextView) findViewById(R.id.content);
+        textView.setText("wanglg");
         multiStateLayout = (MultiStateLayout) findViewById(R.id.multistate);
         new Handler().postDelayed(new Runnable() {
             @Override

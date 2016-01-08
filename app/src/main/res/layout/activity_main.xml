@@ -43,6 +43,5 @@
         app:multi_state_progress="@layout/content_progress">
         <!-- app:multi_state_empty="@layout/content_empty"
          app:multi_state_error="@layout/content_error"-->
-
     </com.leowong.library.multistatelayout.MultiStateLayout>
 </LinearLayout>
