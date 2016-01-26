@@ -56,7 +56,7 @@ public class MultiStateLayout extends FrameLayout {
         TypedArray a = getContext().obtainStyledAttributes(attrs, R.styleable.MultiStateLayout);
         try {
             mMainLayoutId = a.getResourceId(R.styleable.MultiStateLayout_mainLayoutId, R.layout.widget_multi_state_main_layout);
-            mContentId = a.getResourceId(R.styleable.MultiStateLayout_multi_state_content, 0);
+            mContentId = a.getResourceId(R.styleable.MultiStateLayout_multi_state_content, getDefaultContentLayoutId(attrs));
             mEmptyId = a.getResourceId(R.styleable.MultiStateLayout_multi_state_empty, R.layout.widget_multi_state_empty_layout);
             mProgressId = a.getResourceId(R.styleable.MultiStateLayout_multi_state_progress, R.layout.widget_multi_state_progress_layout);
             mErrorId = a.getResourceId(R.styleable.MultiStateLayout_multi_state_error, R.layout.widget_multi_state_error_layout);
@@ -99,8 +99,8 @@ public class MultiStateLayout extends FrameLayout {
         return mState;
     }
 
-    public void setState(int mState) {
-        this.mState = mState;
+    protected int getDefaultContentLayoutId(AttributeSet attrs) {
+        return 0;
     }
 
     public void switchState(int state) {
@@ -133,5 +133,7 @@ public class MultiStateLayout extends FrameLayout {
                 Log.e("MultiStateLayout", "The state is not defined");
                 break;
         }
+        this.mState = state;
+
     }
 }
